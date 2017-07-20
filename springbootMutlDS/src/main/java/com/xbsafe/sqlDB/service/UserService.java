@@ -17,6 +17,8 @@ public class UserService {
 	
 	public User getUser2(String id){
 		DatabaseContextHolder.setDatabaseType(DatabaseType.operateDS);
-		return user.getUser(id);
+		User bean = user.getUser(id);
+		DatabaseContextHolder.setDatabaseType(DatabaseType.operateDS);
+		return bean;
 	}
 }
