@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+	<student>
+		<zhangsan>
+			<sex>男</sex>
+			<age>23</age>
+		</zhangsan>
+		<lisi>
+			<sex>女</sex>
+			<age>34</age>
+		</lisi>
+	</student>
+	<teacher>
+		<wangwu>
+			<sex>男</sex>
+			<age>36</age>
+		</wangwu>
+		<zhaoliu>
+			<sex>女</sex>
+			<age>30</age>
+		</zhaoliu>
+	</teacher>
+</user>

@@ -1,0 +1,3 @@
+*.classpath
+groovy-file/target/
+groovy-file/.settings/
