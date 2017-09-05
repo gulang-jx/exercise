@@ -1,6 +1,0 @@
-*.classpath
-groovy-file/target/
-groovy-file/.settings/
-storm_wordCount.zip
-storm_wordCount/target/
-storm_wordCount/.settings/
