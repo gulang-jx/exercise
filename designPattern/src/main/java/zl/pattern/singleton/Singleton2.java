@@ -1,7 +1,7 @@
 package zl.pattern.singleton;
 
 /**
- * 恶汉式
+ * 饿汉式
  * @author zhouliang
  * @date 2017年9月6日
  */
