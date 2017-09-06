@@ -1,5 +1,10 @@
 package zl.pattern.factory.AbstractFactory;
 
+/**
+ * 实体工厂类
+ * @author zhouliang
+ * @date 2017年9月6日
+ */
 public class MobilePhoneFactory implements AbstractMobilePhoneFactory{
 
 	@Override
