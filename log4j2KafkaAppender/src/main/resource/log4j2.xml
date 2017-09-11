@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Configuration status="warn" monitorInterval="30">  
+    <Appenders>  
+        <!-- 输出错误日志到Kafka -->  
+        <Kafka name="KAFKA" topic="sync-errorlog">  
+           <!--  <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY" /> -->  
+           <!--  <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS}:%4p %t (%F:%L) - %m%n" /> -->  
+            <Property name="bootstrap.servers">10.9.1.101:9092</Property>  
+        </Kafka>  
+        <Console name="Console" target="SYSTEM_OUT">
+			<!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch） -->
+			<ThresholdFilter level="trace" onMatch="ACCEPT"
+							 onMismatch="DENY" />
+			<!--这个都知道是输出日志的格式 -->
+			<PatternLayout
+					pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n" />
+		</Console>
+    </Appenders>  
+  	
+    <Loggers>  
+    	<Root level="info">
+    		<AppenderRef ref="Console"/>  
+    	</Root>
+        <Logger name="zl.utils" level="info" additivity="false">  
+            <AppenderRef ref="KAFKA"/>  
+        </Logger>  
+    </Loggers>  
+</Configuration> 
