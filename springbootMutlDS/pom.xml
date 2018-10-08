@@ -85,5 +85,17 @@
 			<artifactId>cxf-rt-transports-http</artifactId>
 			<version>3.1.6</version>
 		</dependency>
+		<!--jsonrpc 2.0-->
+		<dependency>
+			<groupId>com.github.briandilley.jsonrpc4j</groupId>
+			<artifactId>jsonrpc4j</artifactId>
+			<version>1.4.6</version>
+		</dependency>
+		<!--json-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.24</version>
+		</dependency>
 	</dependencies>
 </project>

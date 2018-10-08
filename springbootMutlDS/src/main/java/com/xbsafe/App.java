@@ -1,5 +1,6 @@
 package com.xbsafe;
 
+import com.googlecode.jsonrpc4j.spring.AutoJsonRpcServiceImplExporter;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +16,16 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class App {
 	public static void main(String[] args) {
 		SpringApplication.run(App.class,args);
+	}
+
+	/**
+	 * register jsonrpc exporter
+	 * @return
+	 */
+	@Bean
+	public static AutoJsonRpcServiceImplExporter autoJsonRpcServiceImplExporter(){
+		AutoJsonRpcServiceImplExporter exp = new AutoJsonRpcServiceImplExporter();
+		return exp;
 	}
 
 	/**
