@@ -12,6 +12,13 @@ public class CustomedLinkedHashMap extends LinkedHashMap {
     public CustomedLinkedHashMap(int size){
         this.size = size;
     }
+    public CustomedLinkedHashMap(int initialCapacity,float loadFactor){
+        super(initialCapacity, loadFactor);
+    }
+    public CustomedLinkedHashMap(int initialCapacity,float loadFactor,int size){
+        super(initialCapacity, loadFactor);
+        this.size = size;
+    }
     @Override
     protected boolean removeEldestEntry(Map.Entry eldest) {
         return size>size();
